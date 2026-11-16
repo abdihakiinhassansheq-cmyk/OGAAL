@@ -1,79 +1,208 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><script>parent.postMessage({type:'gryphon:document'},'*')</script><script src="gryphon-runtime.js" onerror="parent.postMessage({type:'gryphon:bridge-error'},'*')"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0f17">
-  <meta name="description" content="Promotional media, practical AI video workflows, and hands-on training from OGAAL SERVIS.">
-  <title>OGAAL SERVIS — Digital Services & AI Video Solutions</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OGAAL SERVIS — AI Video, Subscriptions & Digital Services</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="brand" aria-label="OGAAL SERVIS home"><span class="brand-badge" aria-hidden="true">OS</span><span>OGAAL SERVIS</span></a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#services">Services</a><a href="#trust">Why Us</a><a href="#quote">Get a Quote</a>
-      </nav>
-      <a href="#quote" class="btn btn-primary nav-cta">Request Quote</a>
+  <header class="topbar">
+    <a href="#" class="brand">
+      <span class="brand-mark">OS</span>
+      <span class="brand-name">OGAAL SERVIS</span>
+    </a>
+
+    <div class="top-actions">
+      <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme" title="Toggle Dark/Light">
+        🌙
+      </button>
+      <button id="menuToggle" class="icon-btn" type="button" aria-label="Toggle menu">
+        ☰
+      </button>
     </div>
   </header>
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="pill">Digital Services <span aria-hidden="true">•</span> AI Video <span aria-hidden="true">•</span> Training</span>
-          <h1>Build bold brands with <span>OGAAL SERVIS</span></h1>
-          <p>We help creators and businesses grow with high-impact promotional media, modern AI video workflows, and practical hands-on AI video generation training.</p>
-          <div class="hero-actions"><a href="#quote" class="btn btn-primary">Start Your Project</a><a href="#services" class="btn btn-secondary">Explore Services</a></div>
-        </div>
-        <aside class="hero-card" aria-label="What you get">
-          <div class="hero-card-title">What you get</div>
-          <div class="stat-list">
-            <article class="stat-item"><strong>Promotional Media</strong><span>Eye-catching visuals, brand assets, and social campaign creatives.</span></article>
-            <article class="stat-item"><strong>AI Video Production</strong><span>Fast, structured visual storytelling and short-form video assets.</span></article>
-            <article class="stat-item"><strong>Practical AI Training</strong><span>Step-by-step guidance so you can create with confidence.</span></article>
+
+  <nav id="mobileMenu" class="nav-drawer hidden">
+    <a href="#subscriptions">Subscriptions &amp; AI</a>
+    <a href="#accounts">Accounts &amp; Growth</a>
+    <a href="#quote-box">Request Quote</a>
+  </nav>
+
+  <main class="container">
+    <section class="hero-card">
+      <h1>Subscriptions, AI Video Training &amp; Digital Services</h1>
+      <p class="hero-sub">
+        AI video workflows, creator training, social media growth &amp; accounts, and custom promotional media — delivered with fast support via WhatsApp.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#subscriptions" class="btn-primary">Browse Subscriptions</a>
+        <a href="#accounts" class="btn-outline">Accounts Market →</a>
+      </div>
+    </section>
+
+    <section id="subscriptions" class="section-block">
+      <div class="section-head">
+        <h2>AI Tools &amp; Subscriptions</h2>
+        <p>Select a plan duration and tap Order to message OGAAL SERVIS on WhatsApp.</p>
+      </div>
+
+      <!-- Card 1 -->
+      <article class="product-card" data-product="AI Video Production Course">
+        <div class="card-top">
+          <div class="app-badge badge-purple">AI</div>
+          <div>
+            <span class="tag">AI TRAINING</span>
+            <h3>AI Video Production Course</h3>
           </div>
-        </aside>
-      </div>
+        </div>
+        <p class="card-desc">Hands-on AI video generation, prompts, scene workflows &amp; short-form content.</p>
+
+        <div class="plan-pills">
+          <button type="button" class="pill active" data-plan="Starter" data-price="$25">Starter</button>
+          <button type="button" class="pill" data-plan="Full Course" data-price="$60">Full Course</button>
+          <button type="button" class="pill" data-plan="1-on-1 Coaching" data-price="$95">1-on-1</button>
+        </div>
+
+        <div class="card-bottom">
+          <div class="price-box">
+            <span class="price-now">$25</span>
+            <span class="price-note">for Starter · OGAAL SERVIS</span>
+          </div>
+          <button type="button" class="btn-order">Order →</button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="product-card" data-product="Google AI Pro & Creative Pack">
+        <div class="card-top">
+          <div class="app-badge badge-blue">✦</div>
+          <div>
+            <span class="tag">AI TOOLS</span>
+            <h3>Google AI Pro &amp; Creative Pack</h3>
+          </div>
+        </div>
+        <p class="card-desc">AI workflows, video generation tools, cloud storage &amp; creator setup.</p>
+
+        <div class="plan-pills">
+          <button type="button" class="pill active" data-plan="1 Month" data-price="$15">1M</button>
+          <button type="button" class="pill" data-plan="6 Months" data-price="$45">6M</button>
+          <button type="button" class="pill" data-plan="12 Months" data-price="$75">12M</button>
+        </div>
+
+        <div class="card-bottom">
+          <div class="price-box">
+            <span class="price-now">$15</span>
+            <span class="price-note">for 1 Month · OGAAL SERVIS</span>
+          </div>
+          <button type="button" class="btn-order">Order →</button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="product-card" data-product="Commercial & Social Video Ads">
+        <div class="card-top">
+          <div class="app-badge badge-dark">▶</div>
+          <div>
+            <span class="tag">PROMOTIONAL MEDIA</span>
+            <h3>Commercial &amp; Social Video Ads</h3>
+          </div>
+        </div>
+        <p class="card-desc">9:16 vertical reels/TikToks and 16:9 brand promos tailored for your business.</p>
+
+        <div class="plan-pills">
+          <button type="button" class="pill active" data-plan="1 Video" data-price="$30">1 Video</button>
+          <button type="button" class="pill" data-plan="5 Videos" data-price="$120">5 Videos</button>
+          <button type="button" class="pill" data-plan="Monthly Pack" data-price="$220">Monthly</button>
+        </div>
+
+        <div class="card-bottom">
+          <div class="price-box">
+            <span class="price-now">$30</span>
+            <span class="price-note">for 1 Video · OGAAL SERVIS</span>
+          </div>
+          <button type="button" class="btn-order">Order →</button>
+        </div>
+      </article>
     </section>
-    <section id="services" class="section">
-      <div class="container"><div class="section-header"><h2>Our core services</h2><p>Clear, practical digital solutions designed to save time and elevate your brand presence.</p></div>
-        <div class="grid-3">
-          <article class="card"><div class="icon-box" aria-hidden="true">01</div><h3>Promotional Media</h3><p>Clean promotional graphics, launch visuals, and engaging media tailored for social platforms and business campaigns.</p></article>
-          <article class="card"><div class="icon-box" aria-hidden="true">02</div><h3>AI Video Tools &amp; Workflows</h3><p>Structured prompts, scene planning, and modern AI video production workflows for both vertical (9:16) and widescreen (16:9) formats.</p></article>
-          <article class="card"><div class="icon-box" aria-hidden="true">03</div><h3>AI Video Training</h3><p>Focused training courses that walk you through generating consistent scenes, refining visuals, and publishing faster.</p></article>
-        </div>
+
+    <section id="accounts" class="section-block">
+      <div class="section-head">
+        <h2>Accounts Market &amp; Growth</h2>
+        <p>Social media pages, growth support, and ready digital assets.</p>
       </div>
+
+      <article class="product-card" data-product="Facebook, TikTok & YouTube Growth">
+        <div class="card-top">
+          <div class="app-badge badge-green">↑</div>
+          <div>
+            <span class="tag">SOCIAL GROWTH</span>
+            <h3>Facebook, TikTok &amp; YouTube Growth</h3>
+          </div>
+        </div>
+        <p class="card-desc">Content strategy, posting consistency, and page setup for creators &amp; brands.</p>
+
+        <div class="plan-pills">
+          <button type="button" class="pill active" data-plan="Audit & Setup" data-price="$20">Setup</button>
+          <button type="button" class="pill" data-plan="2 Weeks" data-price="$55">2 Weeks</button>
+          <button type="button" class="pill" data-plan="1 Month" data-price="$95">1 Month</button>
+        </div>
+
+        <div class="card-bottom">
+          <div class="price-box">
+            <span class="price-now">$20</span>
+            <span class="price-note">for Setup · OGAAL SERVIS</span>
+          </div>
+          <button type="button" class="btn-order">Order →</button>
+        </div>
+      </article>
     </section>
-    <section id="trust" class="section">
-      <div class="container"><div class="section-header"><h2>Why clients choose OGAAL SERVIS</h2><p>Reliable execution, clear communication, and practical results built for real workflows.</p></div>
-        <div class="trust-grid">
-          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Mobile-first &amp; fast delivery</h3><p>Every layout and asset is crafted to look sharp and load smoothly across devices.</p></div></article>
-          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Structured creative process</h3><p>From concept and prompt structure to final polish, every step stays organized.</p></div></article>
-          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Tailored to your goals</h3><p>Whether you need promotional media, AI video help, or training, we fit your scope.</p></div></article>
-          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Transparent quotes</h3><p>Request a clear quote upfront with zero guesswork before work begins.</p></div></article>
-        </div>
-      </div>
-    </section>
-    <section id="quote" class="section">
-      <div class="container"><div class="contact-box">
-        <div class="contact-info"><span class="eyebrow">LET'S TALK</span><h2>Request a quote or get in touch</h2><p>Tell us what you need—promotional media, AI video production, or training—and we’ll help shape a clear plan and estimate.</p>
-          <div class="contact-meta"><div><strong>Brand:</strong> OGAAL SERVIS</div><div><strong>Response time:</strong> Within 24 hours</div><div><strong>Formats:</strong> Mobile &amp; desktop ready</div></div>
-          <p class="form-note">This preview prepares your request locally; it does not send or store your information.</p>
-        </div>
-        <div class="quote-form" aria-label="Quote request form">
-          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required></div>
-          <div class="field"><label for="contact">Email or phone / WhatsApp</label><input id="contact" name="contact" type="text" placeholder="you@example.com or +252..." autocomplete="email" required></div>
-          <div class="field"><label for="service">Service needed</label><select id="service" name="service"><option>Promotional Media</option><option>AI Video Tools &amp; Production</option><option>AI Video Training</option><option>Custom Package</option></select></div>
-          <div class="field"><label for="details">Project details</label><textarea id="details" name="details" rows="3" placeholder="Briefly describe what you want to build or learn..." required></textarea></div>
-          <button id="prepareRequest" type="button" class="btn btn-primary">Prepare Quote Request</button>
-          <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
-        </div>
-      </div></div>
+
+    <section id="quote-box" class="quote-card">
+      <span class="tag">LET'S TALK</span>
+      <h2>Custom Request or Quote</h2>
+      <p class="card-desc">
+        Need a custom AI video series, training session, or bundle? Send your details directly to WhatsApp.
+      </p>
+
+      <form id="quoteForm" class="quote-form">
+        <label>
+          Your name
+          <input type="text" id="clientName" placeholder="Enter your name" required />
+        </label>
+
+        <label>
+          Service or course needed
+          <select id="serviceSelect">
+            <option value="AI Video Production Course">AI Video Production Course</option>
+            <option value="Google AI Pro & Creative Pack">Google AI Pro &amp; Creative Pack</option>
+            <option value="Commercial & Social Video Ads">Commercial &amp; Social Video Ads</option>
+            <option value="Facebook, TikTok & YouTube Growth">Facebook, TikTok &amp; YouTube Growth</option>
+          </select>
+        </label>
+
+        <label>
+          Project details
+          <textarea id="projectDetails" rows="3" placeholder="Briefly describe what you want to order or learn..."></textarea>
+        </label>
+
+        <button type="submit" class="btn-primary full-width">Send Request on WhatsApp</button>
+      </form>
     </section>
   </main>
-  <footer><div class="container"><p>© <span id="year"></span> OGAAL SERVIS. All rights reserved.</p></div></footer>
+
+  <a
+    id="floatingWhatsApp"
+    class="wa-float"
+    href="https://wa.me/252614355694?text=Hello%20OGAAL%20SERVIS%2C%20I%20would%20like%20to%20order%20a%20service."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    💬
+  </a>
+
+  <script src="app.js"></script>
 </body>
 </html>
