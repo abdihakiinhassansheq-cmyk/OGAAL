@@ -1,59 +1,63 @@
-const year = document.getElementById("year");
-const prepareButton = document.getElementById("prepareRequest");
-const statusBox = document.getElementById("formStatus");
-const requiredFields = [
-  document.getElementById("name"),
-  document.getElementById("contact"),
-  document.getElementById("details")
-];
+const WHATSAPP_NUMBER = "252614355694";
 
-year.textContent = String(new Date().getFullYear());
+const themeToggle = document.getElementById("themeToggle");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const quoteForm = document.getElementById("quoteForm");
 
-function showStatus(message, isError = false) {
-  statusBox.replaceChildren();
-  statusBox.hidden = false;
-  statusBox.setAttribute("aria-live", "polite");
-  statusBox.style.background = isError ? "rgba(248,113,113,.12)" : "";
-  statusBox.style.borderColor = isError ? "rgba(248,113,113,.4)" : "";
-  statusBox.style.color = isError ? "#fecaca" : "";
-  const paragraph = document.createElement("p");
-  paragraph.textContent = message;
-  statusBox.append(paragraph);
-}
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  themeToggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
 
-function prepareRequest() {
-  const invalidField = requiredFields.find((field) => !field.value.trim());
-  if (invalidField) {
-    showStatus("Please complete your name, contact details, and project details before preparing the request.", true);
-    invalidField.focus();
-    return;
-  }
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
 
-  const request = [
-    `Name: ${requiredFields[0].value.trim()}`,
-    `Contact: ${requiredFields[1].value.trim()}`,
-    `Service: ${document.getElementById("service").value}`,
-    `Project details: ${requiredFields[2].value.trim()}`
-  ].join("\n");
-  statusBox.replaceChildren();
-  statusBox.hidden = false;
-  statusBox.style.background = "";
-  statusBox.style.borderColor = "";
-  statusBox.style.color = "";
-  const title = document.createElement("p");
-  title.textContent = "Your request is prepared. This preview does not send it; copy the details below and share them with OGAAL SERVIS using your preferred contact method.";
-  const details = document.createElement("p");
-  details.className = "request-copy";
-  details.textContent = request;
-  statusBox.append(title, details);
-}
-
-prepareButton.addEventListener("click", prepareRequest);
-for (const field of requiredFields) {
-  field.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && field.tagName !== "TEXTAREA") {
-      event.preventDefault();
-      prepareRequest();
-    }
+mobileMenu.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
   });
-}
+});
+
+document.querySelectorAll(".product-card").forEach((card) => {
+  const pills = card.querySelectorAll(".pill");
+  const priceEl = card.querySelector(".price-now");
+  const noteEl = card.querySelector(".price-note");
+  const orderBtn = card.querySelector(".btn-order");
+  const productName = card.dataset.product;
+
+  let selectedPlan = pills[0]?.dataset.plan || "Standard";
+  let selectedPrice = pills[0]?.dataset.price || "$20";
+
+  pills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      pills.forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      selectedPlan = pill.dataset.plan;
+      selectedPrice = pill.dataset.price;
+
+      priceEl.textContent = selectedPrice;
+      noteEl.textContent = `for ${selectedPlan} · OGAAL SERVIS`;
+    });
+  });
+
+  orderBtn.addEventListener("click", () => {
+    const msg = `Hello OGAAL SERVIS, I want to order: ${productName} (${selectedPlan} - ${selectedPrice}).`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+});
+
+quoteForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("clientName").value.trim() || "Customer";
+  const service = document.getElementById("serviceSelect").value;
+  const details = document.getElementById("projectDetails").value.trim() || "No extra details";
+
+  const msg = `Hello OGAAL SERVIS,\nName: ${name}\nService: ${service}\nDetails: ${details}`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+});
