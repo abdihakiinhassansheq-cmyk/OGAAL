@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head><script>parent.postMessage({type:'gryphon:document'},'*')</script><script src="gryphon-runtime.js" onerror="parent.postMessage({type:'gryphon:bridge-error'},'*')"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f17">
+  <meta name="description" content="Promotional media, practical AI video workflows, and hands-on training from OGAAL SERVIS.">
+  <title>OGAAL SERVIS — Digital Services & AI Video Solutions</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="OGAAL SERVIS home"><span class="brand-badge" aria-hidden="true">OS</span><span>OGAAL SERVIS</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#trust">Why Us</a><a href="#quote">Get a Quote</a>
+      </nav>
+      <a href="#quote" class="btn btn-primary nav-cta">Request Quote</a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill">Digital Services <span aria-hidden="true">•</span> AI Video <span aria-hidden="true">•</span> Training</span>
+          <h1>Build bold brands with <span>OGAAL SERVIS</span></h1>
+          <p>We help creators and businesses grow with high-impact promotional media, modern AI video workflows, and practical hands-on AI video generation training.</p>
+          <div class="hero-actions"><a href="#quote" class="btn btn-primary">Start Your Project</a><a href="#services" class="btn btn-secondary">Explore Services</a></div>
+        </div>
+        <aside class="hero-card" aria-label="What you get">
+          <div class="hero-card-title">What you get</div>
+          <div class="stat-list">
+            <article class="stat-item"><strong>Promotional Media</strong><span>Eye-catching visuals, brand assets, and social campaign creatives.</span></article>
+            <article class="stat-item"><strong>AI Video Production</strong><span>Fast, structured visual storytelling and short-form video assets.</span></article>
+            <article class="stat-item"><strong>Practical AI Training</strong><span>Step-by-step guidance so you can create with confidence.</span></article>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section id="services" class="section">
+      <div class="container"><div class="section-header"><h2>Our core services</h2><p>Clear, practical digital solutions designed to save time and elevate your brand presence.</p></div>
+        <div class="grid-3">
+          <article class="card"><div class="icon-box" aria-hidden="true">01</div><h3>Promotional Media</h3><p>Clean promotional graphics, launch visuals, and engaging media tailored for social platforms and business campaigns.</p></article>
+          <article class="card"><div class="icon-box" aria-hidden="true">02</div><h3>AI Video Tools &amp; Workflows</h3><p>Structured prompts, scene planning, and modern AI video production workflows for both vertical (9:16) and widescreen (16:9) formats.</p></article>
+          <article class="card"><div class="icon-box" aria-hidden="true">03</div><h3>AI Video Training</h3><p>Focused training courses that walk you through generating consistent scenes, refining visuals, and publishing faster.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="trust" class="section">
+      <div class="container"><div class="section-header"><h2>Why clients choose OGAAL SERVIS</h2><p>Reliable execution, clear communication, and practical results built for real workflows.</p></div>
+        <div class="trust-grid">
+          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Mobile-first &amp; fast delivery</h3><p>Every layout and asset is crafted to look sharp and load smoothly across devices.</p></div></article>
+          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Structured creative process</h3><p>From concept and prompt structure to final polish, every step stays organized.</p></div></article>
+          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Tailored to your goals</h3><p>Whether you need promotional media, AI video help, or training, we fit your scope.</p></div></article>
+          <article class="trust-item"><span class="check" aria-hidden="true">✓</span><div><h3>Transparent quotes</h3><p>Request a clear quote upfront with zero guesswork before work begins.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="quote" class="section">
+      <div class="container"><div class="contact-box">
+        <div class="contact-info"><span class="eyebrow">LET'S TALK</span><h2>Request a quote or get in touch</h2><p>Tell us what you need—promotional media, AI video production, or training—and we’ll help shape a clear plan and estimate.</p>
+          <div class="contact-meta"><div><strong>Brand:</strong> OGAAL SERVIS</div><div><strong>Response time:</strong> Within 24 hours</div><div><strong>Formats:</strong> Mobile &amp; desktop ready</div></div>
+          <p class="form-note">This preview prepares your request locally; it does not send or store your information.</p>
+        </div>
+        <div class="quote-form" aria-label="Quote request form">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required></div>
+          <div class="field"><label for="contact">Email or phone / WhatsApp</label><input id="contact" name="contact" type="text" placeholder="you@example.com or +252..." autocomplete="email" required></div>
+          <div class="field"><label for="service">Service needed</label><select id="service" name="service"><option>Promotional Media</option><option>AI Video Tools &amp; Production</option><option>AI Video Training</option><option>Custom Package</option></select></div>
+          <div class="field"><label for="details">Project details</label><textarea id="details" name="details" rows="3" placeholder="Briefly describe what you want to build or learn..." required></textarea></div>
+          <button id="prepareRequest" type="button" class="btn btn-primary">Prepare Quote Request</button>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
+        </div>
+      </div></div>
+    </section>
+  </main>
+  <footer><div class="container"><p>© <span id="year"></span> OGAAL SERVIS. All rights reserved.</p></div></footer>
+</body>
+</html>
